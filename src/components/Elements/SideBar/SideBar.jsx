@@ -20,8 +20,8 @@ function SideBar() {
         <div className='h-screen flex flex-col gap-1 hover:overflow-auto  bg-[#f0f2f5] pl-4 pt-2'>
             {data &&
                 data.map((profile) => (
-                    <Link to='/Profile'>
-                        <div className='flex gap-3 py-2 px-2 hover:cursor-pointer hover:bg-gray-200 rounded' key={profile.id}>
+                    <Link to='/Profile' key={profile.id}>
+                        <div className='flex gap-3 py-2 px-2 hover:cursor-pointer hover:bg-gray-200 rounded'>
                             <img className='w-6 rounded-full' src={profile.logo} alt='' />
                             <span className='font-semibold'>{profile.name}</span>
                         </div>

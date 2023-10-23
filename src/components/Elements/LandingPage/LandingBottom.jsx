@@ -6,6 +6,7 @@ import {BsThreeDots} from "react-icons/bs"
 import {BiWorld} from "react-icons/bi"
 import { useQuery } from '@tanstack/react-query'
 import { fetchProfiles } from '../../../api/profiles'
+import { Link } from 'react-router-dom'
 
 
 function LandingBottom() {
@@ -19,7 +20,7 @@ function LandingBottom() {
             {/* Top content  */}
             <div className='flex justify-between px-4 items-center py-2'>
                {data && data.map((profile) => (
-                <div className='flex items-center gap-2' key={profile.id}>
+               <Link to='/Profile'  key={profile.id}> <div className='flex items-center gap-2'>
                  <img className="w-10 h-10 rounded-full cursor-pointer" src={profile.logo} alt="image" />
                     <div className='flex flex-col'>
                         <span className='font-semibold hover:underline'>{profile.name}</span>
@@ -28,7 +29,7 @@ function LandingBottom() {
                             <span><BiWorld/></span>
                         </div>
                     </div>
-                </div>
+                </div></Link>
                ) )}
                 <div className='flex gap-2 items-center'>
                     <div className='p-2 text-gray-700 hover:bg-[#f0f2f5] rounded-full cursor-pointer'><BsThreeDots size={"20px"}/></div>
