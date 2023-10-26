@@ -17,7 +17,7 @@ function SideBar() {
 
     return (
 
-        <div className='h-screen flex flex-col gap-1 hover:overflow-auto fixed bg-[#f0f2f5] pl-4 pt-2'>
+        <div className='h-full flex flex-col gap-1 hover:overflow-auto fixed bg-[#f0f2f5] pl-4 pt-2'>
             {data &&
                 data.map((profile) => (
                     <Link to='Profile' key={profile.id}>
